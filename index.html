@@ -4,437 +4,222 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chitra Tutorial | Find Best Tutors Across India</title>
+<title>Chitra Tutorial</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f4f4;
+text-align:center;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+header{
+background:#1e88e5;
+color:white;
+padding:40px 20px;
+}
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+header h1{
+font-size:50px;
+margin:0;
+font-weight:bold;
+}
 
+header p{
+font-size:22px;
+}
+
+.container{
+padding:20px;
+}
+
+.card{
+background:white;
+max-width:700px;
+margin:20px auto;
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.btn{
+background:#28a745;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+margin:10px;
+}
+
+.btn:hover{
+background:#218838;
+}
+
+input, textarea{
+width:90%;
+padding:12px;
+margin:8px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:16px;
+}
+
+.hidden{
+display:none;
+}
+
+.success{
+color:green;
+font-size:22px;
+font-weight:bold;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
 <header>
-
-<div class="logo">
-<i class="fa-solid fa-graduation-cap"></i>
-Chitra Tutorial
-</div>
-
-<nav>
-
-<ul id="menu">
-
-<li><a href="#">Home</a></li>
-<li><a href="#features">Features</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#register">Register</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<div class="menu-btn">
-<i class="fa-solid fa-bars"></i>
-</div>
-
+<h1>Chitra Tutorial</h1>
+<p>Find The Right Tutor Near You</p>
 </header>
 
-<!-- HERO SECTION -->
-
-<section class="hero">
-
-<div class="overlay"></div>
-
-<div class="hero-content">
-
-<h1>
-India's Trusted Tutor Finding Platform
-</h1>
-
-<p>
-Find Qualified Tutors Or Get Students
-Anywhere In India.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#register" class="btn">
-Register As Tutor
-</a>
-
-<a href="#register" class="btn btn2">
-Register As Parent
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FEATURES -->
-
-<section class="features" id="features">
-
-<h2 class="section-title">
-Why Choose Chitra Tutorial?
-</h2>
-
-<div class="feature-container">
+<div class="container">
 
 <div class="card">
+<h2>Choose Registration Type</h2>
 
-<i class="fa-solid fa-user-check"></i>
-
-<h3>Verified Tutors</h3>
-
-<p>
-Find skilled and trusted tutors for every subject.
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-indian-rupee-sign"></i>
-
-<h3>₹1 Registration</h3>
-
-<p>
-Quick registration with minimal fee.
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-earth-asia"></i>
-
-<h3>All India Access</h3>
-
-<p>
-Connect with tutors and parents across India.
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-laptop"></i>
-
-<h3>Online & Offline</h3>
-
-<p>
-Choose online classes or home tuition.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="stat-box">
-
-<h2>500+</h2>
-
-<p>Tutors</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>1000+</h2>
-
-<p>Students</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>28+</h2>
-
-<p>States</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>24x7</h2>
-
-<p>Support</p>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<div class="about-image">
-
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900"
-alt="education">
-
-</div>
-
-<div class="about-content">
-
-<h2>
-About Chitra Tutorial
-</h2>
-
-<p>
-
-Chitra Tutorial is an educational platform
-that connects students and parents with
-experienced tutors throughout India.
-
-Whether you need home tuition,
-online classes, or subject experts,
-we help you find the right teacher.
-
-</p>
-
-<p>
-
-Our mission is to make quality education
-accessible and affordable for every student.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- REGISTER -->
-
-<section id="register" class="register">
-
-<h2 class="section-title">
-Registration Form
-</h2>
-
-<div class="form-box">
-
-<form id="registerForm">
-
-<input type="text"
-placeholder="Full Name"
-required>
-
-<input type="tel"
-placeholder="Mobile Number"
-required>
-
-<input type="email"
-placeholder="Email Address"
-required>
-
-<select required>
-
-<option value="">
-Select Registration Type
-</option>
-
-<option>
-Tutor
-</option>
-
-<option>
-Parent
-</option>
-
-</select>
-
-<input type="text"
-placeholder="State"
-required>
-
-<input type="text"
-placeholder="City"
-required>
-
-<input type="text"
-placeholder="Subjects / Requirement">
-
-<textarea
-placeholder="Additional Details">
-</textarea>
-
-<button type="submit">
-
-Continue To Payment
-
+<button class="btn" onclick="showTutor()">
+Become a Tutor
 </button>
 
-</form>
-
+<button class="btn" onclick="showParent()">
+Registration as Parents
+</button>
 </div>
 
-</section>
-
-<!-- PAYMENT -->
-
-<section class="payment" id="payment">
-
-<h2>
-Registration Successful
-</h2>
-
-<h1>
-₹1 Registration Fee
-</h1>
+<div class="card">
+<h2>Serving Areas</h2>
 
 <p>
-Pay ₹1 using the QR code below
-to activate your account.
+Civil Lines, George Town, Tagore Town, Darbhanga Colony,
+Katra, Balson, Allahpur, Colonelganj, Lukerganj,
+Ashok Nagar, Rajrooppur, Kareli, Naini,
+Jhunsi, Phaphamau, Dhoomanganj, Govindpur,
+Mumfordganj, Chauk and Nearby Areas.
 </p>
-
-<div class="qr-box">
-
-<img src="images/qr.jpg"
-alt="QR Code">
-
 </div>
 
-<h3>
-UPI ID:
-peeyushsingh752@okaxis
-</h3>
+<div id="tutorForm" class="card hidden">
 
-<input type="file">
+<h2>Tutor Registration</h2>
 
-<button>
-Submit Payment Screenshot
+<input type="text" placeholder="Full Name"><br>
+
+<input type="tel" placeholder="Mobile Number"><br>
+
+<input type="text" placeholder="Gender"><br>
+
+<input type="text" placeholder="Qualification"><br>
+
+<input type="text" placeholder="Subjects"><br>
+
+<input type="text" placeholder="Classes You Can Teach"><br>
+
+<input type="text" placeholder="Area"><br>
+
+<input type="text" placeholder="Experience"><br>
+
+<button class="btn" onclick="showPayment()">
+Continue
 </button>
 
-</section>
-
-<!-- TESTIMONIALS -->
-
-<section class="testimonials">
-
-<h2 class="section-title">
-Student Reviews
-</h2>
-
-<div class="testimonial-container">
-
-<div class="testimonial">
-
-<p>
-"Found a maths tutor within 2 days.
-Excellent platform."
-</p>
-
-<h4>
-- Rahul
-</h4>
-
 </div>
 
-<div class="testimonial">
+<div id="parentForm" class="card hidden">
 
-<p>
-"Very easy registration process."
-</p>
+<h2>Parent Registration</h2>
 
-<h4>
-- Priya
-</h4>
+<input type="text" placeholder="Parent Name"><br>
 
-</div>
+<input type="tel" placeholder="Mobile Number"><br>
 
-<div class="testimonial">
+<input type="text" placeholder="Student Name"><br>
 
-<p>
-"Affordable and useful for parents."
-</p>
+<input type="text" placeholder="Class"><br>
 
-<h4>
-- Anjali
-</h4>
+<input type="text" placeholder="Subjects Required"><br>
 
-</div>
+<input type="text" placeholder="Area"><br>
 
-</div>
+<input type="text" placeholder="Preferred Timing"><br>
 
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<h2 class="section-title">
-Contact Us
-</h2>
-
-<form>
-
-<input type="text"
-placeholder="Your Name">
-
-<input type="email"
-placeholder="Your Email">
-
-<textarea
-placeholder="Message">
-</textarea>
-
-<button>
-Send Message
+<button class="btn" onclick="showPayment()">
+Continue
 </button>
 
-</form>
+</div>
 
-</section>
+<div id="paymentSection" class="card hidden">
 
-<!-- FOOTER -->
+<h2>Registration Fee ₹99</h2>
 
-<footer>
-
-<h3>
-Chitra Tutorial
-</h3>
+<p><b>UPI ID:</b> peeyushsingh752@okaxis</p>
 
 <p>
-Connecting Students & Tutors Across India
+Pay ₹99 and enter UTR Number below.
 </p>
 
-<div class="social">
+<input type="text" placeholder="Enter UTR Number">
 
-<i class="fa-brands fa-facebook"></i>
+<br><br>
 
-<i class="fa-brands fa-instagram"></i>
-
-<i class="fa-brands fa-youtube"></i>
-
-<i class="fa-brands fa-telegram"></i>
+<button class="btn" onclick="successMsg()">
+Submit UTR
+</button>
 
 </div>
 
-<p>
-© 2026 Chitra Tutorial.
-All Rights Reserved.
+<div id="success" class="card hidden">
+
+<p class="success">
+✅ Registration Successful
 </p>
 
-</footer>
+<p>
+Thank you for registering with Chitra Tutorial.
+We will contact you soon.
+</p>
 
-<script src="script.js"></script>
+</div>
+
+</div>
+
+<script>
+
+function showTutor(){
+document.getElementById("tutorForm").classList.remove("hidden");
+document.getElementById("parentForm").classList.add("hidden");
+}
+
+function showParent(){
+document.getElementById("parentForm").classList.remove("hidden");
+document.getElementById("tutorForm").classList.add("hidden");
+}
+
+function showPayment(){
+document.getElementById("paymentSection").classList.remove("hidden");
+window.scrollTo(0,document.body.scrollHeight);
+}
+
+function successMsg(){
+document.getElementById("success").classList.remove("hidden");
+window.scrollTo(0,document.body.scrollHeight);
+}
+
+</script>
 
 </body>
 </html>
