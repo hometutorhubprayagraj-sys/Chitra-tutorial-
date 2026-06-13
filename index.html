@@ -1,56 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Tutor Registration</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutor Connect</title>
+
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#2563eb,#06b6d4);
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    padding:20px;
 }
+
 .container{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    width:350px;
-}
-input,select{
     width:100%;
-    padding:10px;
-    margin:8px 0;
+    max-width:500px;
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
-button{
+
+.logo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logo h1{
+    color:#2563eb;
+}
+
+.logo p{
+    color:#666;
+}
+
+input, select, textarea{
     width:100%;
     padding:12px;
-    background:#007bff;
+    margin-top:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:15px;
+    background:#2563eb;
     color:white;
     border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.success{
+    display:none;
+    text-align:center;
+}
+
+.success h2{
+    color:green;
+    margin-bottom:10px;
+}
+
+.payment-box{
+    background:#f3f4f6;
+    padding:20px;
+    border-radius:12px;
+    margin-top:15px;
+}
+
+.qr{
+    width:180px;
+    height:180px;
+    background:#ddd;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+}
+
+.note{
+    font-size:14px;
+    color:#555;
+    margin-top:10px;
 }
 </style>
 </head>
 <body>
 
 <div class="container">
-<h2>Registration Form</h2>
 
-<form action="payment.html">
+<div id="registerForm">
+
+<div class="logo">
+<h1>Tutor Connect</h1>
+<p>Tutor & Parent Registration Portal</p>
+</div>
+
+<form id="form">
+
 <input type="text" placeholder="Full Name" required>
+
 <input type="tel" placeholder="Mobile Number" required>
-<input type="email" placeholder="Email" required>
+
+<input type="email" placeholder="Email Address" required>
 
 <select required>
-<option value="">Select Type</option>
+<option value="">Select Registration Type</option>
 <option>Tutor</option>
 <option>Parent</option>
 </select>
 
-<button type="submit">Register</button>
+<input type="text" placeholder="City / Area" required>
+
+<textarea rows="4" placeholder="Subjects / Class Requirement"></textarea>
+
+<button type="submit">Register Now</button>
+
 </form>
 
 </div>
+
+<div class="success" id="successPage">
+
+<h2>✅ Registration Successful</h2>
+
+<p>Your registration has been completed.</p>
+
+<div class="payment-box">
+
+<h3>Registration Fee: ₹199</h3>
+
+<br>
+
+<div class="qr">
+QR CODE
+</div>
+
+<p class="note">
+Replace this box with your UPI QR Image.
+</p>
+
+<button>
+Pay Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    document.getElementById("registerForm").style.display="none";
+    document.getElementById("successPage").style.display="block";
+});
+</script>
 
 </body>
 </html>
