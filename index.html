@@ -7,10 +7,11 @@
 <title>Chitra Tutorial</title>
 
 <style>
+
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:#f4f4f4;
+background:#f5f5f5;
 text-align:center;
 }
 
@@ -23,7 +24,7 @@ padding:40px 20px;
 header h1{
 font-size:50px;
 margin:0;
-font-weight:bold;
+font-family:Georgia,serif;
 }
 
 header p{
@@ -36,11 +37,11 @@ padding:20px;
 
 .card{
 background:white;
-max-width:700px;
-margin:20px auto;
 padding:25px;
+margin:20px auto;
+max-width:700px;
 border-radius:15px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+box-shadow:0 0 10px rgba(0,0,0,0.15);
 }
 
 .btn{
@@ -58,13 +59,13 @@ margin:10px;
 background:#218838;
 }
 
-input, textarea{
+input,textarea{
 width:90%;
 padding:12px;
-margin:8px;
+margin:10px 0;
+font-size:16px;
 border:1px solid #ccc;
 border-radius:6px;
-font-size:16px;
 }
 
 .hidden{
@@ -76,6 +77,13 @@ color:green;
 font-size:22px;
 font-weight:bold;
 }
+
+.payment{
+background:#fff3cd;
+padding:20px;
+border-radius:10px;
+}
+
 </style>
 </head>
 
@@ -89,6 +97,7 @@ font-weight:bold;
 <div class="container">
 
 <div class="card">
+
 <h2>Choose Registration Type</h2>
 
 <button class="btn" onclick="showTutor()">
@@ -96,85 +105,94 @@ Become a Tutor
 </button>
 
 <button class="btn" onclick="showParent()">
-Registration as Parents
+Registration as Parent
 </button>
+
 </div>
 
 <div class="card">
-<h2>Serving Areas</h2>
+
+<h2>Areas We Serve</h2>
 
 <p>
-Civil Lines, George Town, Tagore Town, Darbhanga Colony,
-Katra, Balson, Allahpur, Colonelganj, Lukerganj,
-Ashok Nagar, Rajrooppur, Kareli, Naini,
-Jhunsi, Phaphamau, Dhoomanganj, Govindpur,
-Mumfordganj, Chauk and Nearby Areas.
+George Town, Tagore Town, Civil Lines, Katra,
+Darbhanga Colony, Balson, Allahpur,
+Lukerganj, Rajapur, Kareli, Naini,
+Jhunsi, Phaphamau, Ashok Nagar,
+Mumfordganj, Dhoomanganj, Preetam Nagar,
+Old Katra, New Katra, Meerapur,
+Rambagh, Colonelganj, Alopibagh,
+Chowk, Bahadurganj, Kidganj,
+and all Prayagraj Areas.
 </p>
+
 </div>
+
+<!-- Tutor Form -->
 
 <div id="tutorForm" class="card hidden">
 
-<h2>Tutor Registration</h2>
+<h2>Tutor Registration Form</h2>
 
-<input type="text" placeholder="Full Name"><br>
+<input type="text" placeholder="Full Name">
 
-<input type="tel" placeholder="Mobile Number"><br>
+<input type="tel" placeholder="Mobile Number">
 
-<input type="text" placeholder="Gender"><br>
+<input type="text" placeholder="Classes You Can Teach">
 
-<input type="text" placeholder="Qualification"><br>
+<input type="text" placeholder="Subjects">
 
-<input type="text" placeholder="Subjects"><br>
+<input type="text" placeholder="Area">
 
-<input type="text" placeholder="Classes You Can Teach"><br>
+<input type="text" placeholder="Qualification">
 
-<input type="text" placeholder="Area"><br>
+<input type="text" placeholder="Experience">
 
-<input type="text" placeholder="Experience"><br>
-
-<button class="btn" onclick="showPayment()">
-Continue
+<button class="btn" onclick="submitTutorForm()">
+Submit Form
 </button>
 
 </div>
+
+<!-- Parent Form -->
 
 <div id="parentForm" class="card hidden">
 
-<h2>Parent Registration</h2>
+<h2>Parent Registration Form</h2>
 
-<input type="text" placeholder="Parent Name"><br>
+<input type="text" placeholder="Parent Name">
 
-<input type="tel" placeholder="Mobile Number"><br>
+<input type="tel" placeholder="Mobile Number">
 
-<input type="text" placeholder="Student Name"><br>
+<input type="text" placeholder="Student Class">
 
-<input type="text" placeholder="Class"><br>
+<input type="text" placeholder="Required Subject">
 
-<input type="text" placeholder="Subjects Required"><br>
+<input type="text" placeholder="Area">
 
-<input type="text" placeholder="Area"><br>
+<textarea placeholder="Additional Requirement"></textarea>
 
-<input type="text" placeholder="Preferred Timing"><br>
-
-<button class="btn" onclick="showPayment()">
-Continue
+<button class="btn" onclick="submitParentForm()">
+Submit Form
 </button>
 
 </div>
 
-<div id="paymentSection" class="card hidden">
+<!-- Payment Section -->
+
+<div id="paymentSection" class="card payment hidden">
 
 <h2>Registration Fee ₹99</h2>
 
-<p><b>UPI ID:</b> peeyushsingh752@okaxis</p>
-
 <p>
-Pay ₹99 and enter UTR Number below.
+Pay on UPI:
+<b>peeyushsingh752@okaxis</b>
 </p>
 
-<input type="text" placeholder="Enter UTR Number">
+<input type="text" id="utr"
+placeholder="Enter UTR Number">
 
-<br><br>
+<br>
 
 <button class="btn" onclick="successMsg()">
 Submit UTR
@@ -182,15 +200,16 @@ Submit UTR
 
 </div>
 
+<!-- Success -->
+
 <div id="success" class="card hidden">
 
 <p class="success">
-✅ Registration Successful
+✅ Registration Successful!
 </p>
 
 <p>
-Thank you for registering with Chitra Tutorial.
-We will contact you soon.
+Thank You For Registering With Chitra Tutorial.
 </p>
 
 </div>
@@ -200,23 +219,78 @@ We will contact you soon.
 <script>
 
 function showTutor(){
-document.getElementById("tutorForm").classList.remove("hidden");
-document.getElementById("parentForm").classList.add("hidden");
+
+document.getElementById("tutorForm")
+.classList.remove("hidden");
+
+document.getElementById("parentForm")
+.classList.add("hidden");
+
+document.getElementById("paymentSection")
+.classList.add("hidden");
+
+document.getElementById("success")
+.classList.add("hidden");
+
 }
 
 function showParent(){
-document.getElementById("parentForm").classList.remove("hidden");
-document.getElementById("tutorForm").classList.add("hidden");
+
+document.getElementById("parentForm")
+.classList.remove("hidden");
+
+document.getElementById("tutorForm")
+.classList.add("hidden");
+
+document.getElementById("paymentSection")
+.classList.add("hidden");
+
+document.getElementById("success")
+.classList.add("hidden");
+
 }
 
-function showPayment(){
-document.getElementById("paymentSection").classList.remove("hidden");
-window.scrollTo(0,document.body.scrollHeight);
+function submitTutorForm(){
+
+document.getElementById("paymentSection")
+.classList.remove("hidden");
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+function submitParentForm(){
+
+document.getElementById("paymentSection")
+.classList.remove("hidden");
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
 }
 
 function successMsg(){
-document.getElementById("success").classList.remove("hidden");
-window.scrollTo(0,document.body.scrollHeight);
+
+let utr=document.getElementById("utr").value;
+
+if(utr.trim()==""){
+alert("Please Enter UTR Number");
+return;
+}
+
+document.getElementById("success")
+.classList.remove("hidden");
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
 }
 
 </script>
