@@ -1,67 +1,274 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chitra Tutorial - Learn & Grow</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-    <header>
-        <div class="logo">Chitra Tutorial</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Chitra Tutorial Mein Aapka Swagat Hai</h1>
-            <p>Yahan aapko milenge sabse behtareen aur aasan tutorials. Aaj hi apni learning shuru karein!</p>
-            <a href="#courses" class="btn">Explore Courses</a>
-        </div>
-    </section>
+:root {
+    --primary-color: #ff4d4d; /* Bright attractive color like Yatra/Chitra theme */
+    --secondary-color: #2f3640;
+    --light-color: #f5f6fa;
+    --dark-color: #1e272e;
+}
 
-    <section id="courses" class="courses">
-        <h2>Humare Popular Courses</h2>
-        <div class="course-grid">
-            <div class="course-card">
-                <h3>Web Development</h3>
-                <p>HTML, CSS, aur JavaScript seekhein bilkul shuruat se.</p>
-                <a href="#" class="course-btn">Learn More</a>
-            </div>
-            <div class="course-card">
-                <h3>Graphic Design</h3>
-                <p>Photoshop aur Illustrator ke sath creative banna seekhein.</p>
-                <a href="#" class="course-btn">Learn More</a>
-            </div>
-            <div class="course-card">
-                <h3>Digital Marketing</h3>
-                <p>Apne business ya skill ko online grow karne ka sahi tarika.</p>
-                <a href="#" class="course-btn">Learn More</a>
-            </div>
-        </div>
-    </section>
+body {
+    background-color: #ffffff;
+    color: var(--dark-color);
+}
 
-    <section id="contact" class="contact">
-        <h2>Humse Sampark Karein</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Aapka Naam" required>
-            <input type="email" placeholder="Aapki Email ID" required>
-            <textarea placeholder="Aapka Message" rows="5" required></textarea>
-            <button type="submit" class="btn">Message Bhejein</button>
-        </form>
-    </section>
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    <footer>
-        <p>&copy; 2026 Chitra Tutorial. All Rights Reserved.</p>
-    </footer>
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
 
-</body>
-</html>
+.logo i {
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li a {
+    padding: 10px 20px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #e03a3a;
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--secondary-color);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid var(--secondary-color);
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    background: linear-gradient(to right, #fff5f5, #ffffff);
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.hero-content h1 span {
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Courses Section */
+.courses-section {
+    padding: 80px 8%;
+    background: var(--light-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+}
+
+.section-title span {
+    color: var(--primary-color);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.course-icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.course-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.course-card p {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.course-link {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 8%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contact-info {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 50px;
+    max-width: 40%;
+}
+
+.contact-info h2 span {
+    color: var(--primary-color);
+}
+
+.contact-info p {
+    margin: 20px 0;
+    color: #bdc3c7;
+}
+
+.contact-info ul li {
+    margin-bottom: 15px;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.contact-form {
+    padding: 50px;
+    flex: 1;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--dark-color);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar { padding: 20px 4%; }
+    .nav-links { display: none; } /* Mobile me menu hidden rahega */
+    .hero { flex-direction: column; text-align: center; padding: 40px 4%; }
+    .hero-content { max-width: 100%; margin-bottom: 40px; }
+    .hero-image img { max-width: 100%; }
+    .contact-container { flex-direction: column; }
+    .contact-info { max-width: 100%; }
+}
