@@ -1,274 +1,264 @@
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Tutor Hub Prayagraj</title>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
 }
 
-:root {
-    --primary-color: #ff4d4d; /* Bright attractive color like Yatra/Chitra theme */
-    --secondary-color: #2f3640;
-    --light-color: #f5f6fa;
-    --dark-color: #1e272e;
+body{
+background:#f8fafc;
+color:#1e293b;
 }
 
-body {
-    background-color: #ffffff;
-    color: var(--dark-color);
+header{
+background:linear-gradient(135deg,#2563eb,#0ea5e9);
+color:white;
+padding:20px;
 }
 
-/* Navbar Styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--secondary-color);
+.logo{
+font-size:24px;
+font-weight:bold;
 }
 
-.logo i {
-    color: var(--primary-color);
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
 }
 
-.logo span {
-    color: var(--primary-color);
+.hero{
+padding:80px 20px;
+text-align:center;
+max-width:1000px;
+margin:auto;
 }
 
-.nav-links {
-    display: flex;
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
 }
 
-.nav-links li a {
-    padding: 10px 20px;
-    color: var(--secondary-color);
-    font-weight: 600;
-    transition: 0.3s;
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+color:#475569;
 }
 
-.nav-links li a:hover, .nav-links li a.active {
-    color: var(--primary-color);
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#2563eb;
+color:white;
+border-radius:10px;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
 }
 
-/* Buttons */
-.btn-primary {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
+.btn:hover{
+background:#1d4ed8;
 }
 
-.btn-primary:hover {
-    background: #e03a3a;
-    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
+.section{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
 }
 
-.btn-secondary {
-    background: transparent;
-    color: var(--secondary-color);
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-weight: 600;
-    border: 2px solid var(--secondary-color);
-    margin-left: 10px;
-    transition: 0.3s;
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
 }
 
-.btn-secondary:hover {
-    background: var(--secondary-color);
-    color: #fff;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 8%;
-    background: linear-gradient(to right, #fff5f5, #ffffff);
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
-.hero-content {
-    max-width: 50%;
+.card h3{
+margin-bottom:10px;
 }
 
-.hero-content h1 {
-    font-size: 45px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
+.subjects{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
 }
 
-.hero-content h1 span {
-    color: var(--primary-color);
+.subject{
+background:white;
+padding:12px 20px;
+border-radius:30px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.hero-content p {
-    font-size: 16px;
-    color: #7f8c8d;
-    margin-bottom: 30px;
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
 }
 
-.hero-image img {
-    max-width: 500px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+text-decoration:none;
+font-size:24px;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
-/* Courses Section */
-.courses-section {
-    padding: 80px 8%;
-    background: var(--light-color);
+@media(max-width:768px){
+.hero h1{
+font-size:32px;
 }
+.hero p{
+font-size:18px;
+}
+}
+</style>
+</head>
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
+<body>
 
-.section-title h2 {
-    font-size: 36px;
-}
+<header>
+<nav>
+<div class="logo">Home Tutor Hub</div>
 
-.section-title span {
-    color: var(--primary-color);
-}
+<div>
+<a href="parent-register.html">Find Tutor</a>
+<a href="tutor-register.html">Become Tutor</a>
+</div>
+</nav>
+</header>
 
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
+<section class="hero">
 
-.course-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-    transition: 0.3s;
-}
+<h1>Best Home Tutors in Prayagraj</h1>
 
-.course-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
+<p>
+Parents aur Tutors ko ek trusted platform par connect karte hain.
+Find qualified tutors for Maths, Science, English, Commerce and more.
+</p>
 
-.course-icon {
-    font-size: 40px;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
+<a href="parent-register.html" class="btn">
+Find a Tutor
+</a>
 
-.course-card h3 {
-    margin-bottom: 15px;
-    font-size: 22px;
-}
+<a href="tutor-register.html" class="btn">
+Become a Tutor
+</a>
 
-.course-card p {
-    color: #7f8c8d;
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
+</section>
 
-.course-link {
-    color: var(--primary-color);
-    font-weight: 600;
-}
+<section class="section">
 
-/* Contact Section */
-.contact-section {
-    padding: 80px 8%;
-}
+<h2 class="section-title">How It Works</h2>
 
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-    border-radius: 20px;
-    overflow: hidden;
-}
+<div class="cards">
 
-.contact-info {
-    background: var(--secondary-color);
-    color: #fff;
-    padding: 50px;
-    max-width: 40%;
-}
+<div class="card">
+<h3>1️⃣ Register</h3>
+<p>Parent ya Tutor registration form fill karein.</p>
+</div>
 
-.contact-info h2 span {
-    color: var(--primary-color);
-}
+<div class="card">
+<h3>2️⃣ Submit Details</h3>
+<p>Subject, class aur location ki details dein.</p>
+</div>
 
-.contact-info p {
-    margin: 20px 0;
-    color: #bdc3c7;
-}
+<div class="card">
+<h3>3️⃣ Get Connected</h3>
+<p>Hum suitable tutor aur parents ko connect karenge.</p>
+</div>
 
-.contact-info ul li {
-    margin-bottom: 15px;
-}
+</div>
 
-.contact-info ul li i {
-    margin-right: 10px;
-    color: var(--primary-color);
-}
+</section>
 
-.contact-form {
-    padding: 50px;
-    flex: 1;
-}
+<section class="section">
 
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    font-size: 15px;
-}
+<h2 class="section-title">Popular Subjects</h2>
 
-.contact-form textarea {
-    resize: none;
-}
+<div class="subjects">
+<div class="subject">Mathematics</div>
+<div class="subject">Science</div>
+<div class="subject">English</div>
+<div class="subject">Physics</div>
+<div class="subject">Chemistry</div>
+<div class="subject">Biology</div>
+<div class="subject">Commerce</div>
+<div class="subject">Computer</div>
+</div>
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-    background: var(--dark-color);
-    color: #fff;
-    font-size: 14px;
-}
+</section>
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar { padding: 20px 4%; }
-    .nav-links { display: none; } /* Mobile me menu hidden rahega */
-    .hero { flex-direction: column; text-align: center; padding: 40px 4%; }
-    .hero-content { max-width: 100%; margin-bottom: 40px; }
-    .hero-image img { max-width: 100%; }
-    .contact-container { flex-direction: column; }
-    .contact-info { max-width: 100%; }
-}
+<section class="section">
+
+<h2 class="section-title">Why Choose Us?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Verified Tutors</h3>
+<p>Experienced and qualified tutors.</p>
+</div>
+
+<div class="card">
+<h3>Local Support</h3>
+<p>Prayagraj area specific tutor matching.</p>
+</div>
+
+<div class="card">
+<h3>Quick Response</h3>
+<p>Fast tutor-parent connection process.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Home Tutor Hub Prayagraj | All Rights Reserved
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/919999999999"
+target="_blank">
+💬
+</a>
+
+</body>
+</html>
