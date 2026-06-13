@@ -1,230 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chitra Tutorial</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f4f7fb;
-}
-
-header{
-background:linear-gradient(135deg,#0f172a,#2563eb);
-color:white;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-}
-
-.hero{
-height:90vh;
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1400');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.hero-content h1{
-font-size:50px;
-margin-bottom:15px;
-}
-
-.hero-content p{
-font-size:20px;
-margin-bottom:25px;
-}
-
-.btn{
-padding:14px 28px;
-background:#0ea5e9;
-color:white;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-size:16px;
-margin:5px;
-}
-
-.form-section{
-display:none;
-padding:40px 20px;
-max-width:700px;
-margin:auto;
-}
-
-.form-box{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 0 20px rgba(0,0,0,.1);
-}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-margin-top:12px;
-border:1px solid #ccc;
-border-radius:8px;
-}
-
-.submit-btn{
-width:100%;
-margin-top:15px;
-padding:14px;
-background:#2563eb;
-color:white;
-border:none;
-border-radius:8px;
-}
-
-.payment{
-display:none;
-text-align:center;
-padding:40px 20px;
-}
-
-.qr{
-width:220px;
-height:220px;
-border:2px dashed #888;
-margin:20px auto;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-}
-
-footer{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="logo">Chitra Tutorial</div>
-</header>
-
-<section class="hero">
-<div class="hero-content">
-<h1>Find Best Tutors Across India</h1>
-<p>Register as Tutor or Parent and connect instantly.</p>
-
-<button class="btn" onclick="openForm('Tutor')">
-Register as Tutor
-</button>
-
-<button class="btn" onclick="openForm('Parent')">
-Register as Parent
-</button>
-</div>
-</section>
-
-<section class="form-section" id="formSection">
-<div class="form-box">
-
-<h2 id="formTitle"></h2>
-
-<form onsubmit="showPayment(event)">
-
-<input type="text" placeholder="Full Name" required>
-
-<input type="tel" placeholder="Mobile Number" required>
-
-<input type="email" placeholder="Email Address" required>
-
-<input type="text" placeholder="State" required>
-
-<input type="text" placeholder="City" required>
-
-<textarea placeholder="Subjects / Requirement"></textarea>
-
-<button class="submit-btn">
-Continue to Payment
-</button>
-
-</form>
-
-</div>
-</section>
-
 <section class="payment" id="paymentPage">
 
-<h2>Registration Successful</h2>
+<h2>🎉 Registration Successful</h2>
 
-<h3>Registration Fee: ₹99</h3>
+<h3>Chitra Tutorial Registration Fee</h3>
 
-<p>Pay using UPI</p>
+<h1>₹1 Only</h1>
 
-<h3>chitratutorial@upi</h3>
+<p>
+Please scan the QR code below and pay ₹1 to activate your account.
+</p>
 
-<div class="qr">
-UPLOAD YOUR QR HERE
-</div>
+<img src="images/qr.jpg"
+     alt="Chitra Tutorial Payment QR"
+     width="250"
+     style="border-radius:10px;box-shadow:0 0 15px rgba(0,0,0,.2);">
 
-<input type="file">
+<br><br>
+
+<b>UPI ID:</b>
+peeyushsingh752@okaxis
+
+<br><br>
+
+<label>Upload Payment Screenshot</label>
+
+<input type="file"
+accept="image/*"
+required>
 
 <br><br>
 
 <button class="btn">
-Submit Payment Screenshot
+Submit Payment Proof
 </button>
 
 </section>
-
-<footer>
-© 2026 Chitra Tutorial | All Rights Reserved
-</footer>
-
-<script>
-
-function openForm(type){
-document.getElementById("formSection").style.display="block";
-document.getElementById("formTitle").innerHTML=
-type + " Registration";
-window.scrollTo({
-top:document.getElementById("formSection").offsetTop,
-behavior:"smooth"
-});
-}
-
-function showPayment(e){
-e.preventDefault();
-document.getElementById("paymentPage").style.display="block";
-
-window.scrollTo({
-top:document.getElementById("paymentPage").offsetTop,
-behavior:"smooth"
-});
-}
-
-</script>
-
-</body>
-</html>
